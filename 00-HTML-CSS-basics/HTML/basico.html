@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Testing HTML</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="How to html docs easily">
+    <meta name="keywords" content="Html,Test,Basic,Tags">
+    <meta name="author" content="Federico Vidaurreta">
+  </head>
+
+  <body>
+    <header id="header">
+     <h1>Testeando html basico!</h1>
+    </header>
+   
+    <nav id="nav">
+      <h2>EMPTY NAV SECTION</h2>
+    </nav>
+
+    <section id="main">
+      <h2>MAIN SECTION</h2>
+      <article id="html_text">
+        <h3>TEXT</h3>
+        <p>
+          HTML 4.01 is the only version of HTML that you should use when creating a new web page, as, according to the specification:
+        </p>
+        <blockquote cite="http://www.w3.org/TR/html401/">
+          <p>
+            This document obsoletes previous versions of HTML 4.0, although W3C will continue to make those specifications and their DTDs available at the W3C website.
+          </p>
+        </blockquote>
+        <p>
+          This did not end well for me. Oh well, <q lang="fr">c'est la vie</q> as the French say.
+        </p>
+        <p>
+          <em>Please</em> remember to unplug the kettle at night.
+        </p>
+        <p>
+          She really does add that little bit of <i lang="fr">je ne sais quoi</i>.
+        </p>
+        <p>
+          There are a total of twenty different species living inside this enclosure. <strong>Warning: Do not feed them: they will eat your shoes</strong>.
+        </p>
+        <p>
+          In this article, Chris Mills will show you how to combine <b>HTML5</b>, <b>CSS3</b>, <b>coloured card</b> and <b>string</b> to create an attractive mobile for your child's bedroom.
+        </p>
+        <p>
+          <small>This content is released under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"> Creative Commons Attribution Share-alike license</a>.</small>
+        </p>
+        <p>
+          I was born on the <time datetime="1978-06-27">27<sup>th</sup> June 1978</time>.
+        </p>
+        <pre>
+          <code class="language-perl">
+            # read in the named file in its entirety
+            sub slurp {
+              my $filename = shift;
+              my $file     = new FileHandle $filename;
+             
+              if ( defined $file ) {
+                local $/;
+                return &lt; $file &gt;;
+              }
+              return undef;
+            };
+          </code>
+        </pre>
+        <p>
+          It is bad form to use event handlers like <code class="language-javascript">onclick</code> directly in the HTML.
+        </p>
+        <p>One common method of determining if a computer is connected to the internet is to use the computer program <code>ping</code> to see if a computer likely to be running is reachable.
+        </p>
+        <pre>
+          <samp class="prompt">kittaghy%</samp> <kbd>ping -o google.com</kbd>
+          <samp>
+            PING google.com (64.233.187.99): 56 data bytes
+            64 bytes from 64.233.187.99: icmp_seq=0 ttl=242 time=108.995 ms
+
+            --- google.com ping statistics ---
+            1 packets transmitted, 1 packets received, 0% packet loss
+            round-trip min/avg/max/stddev = 108.995/108.995/108.995/0.000 ms
+          </samp>
+        </pre>
+        <p>
+          The value of <var>x</var> in 3<var>x</var>+2=14 is 4.
+        </p>
+        <pre>
+          <code class="language-perl">
+            my <var>$welcome</var> = "Hello world!";
+          </code>
+        </pre>
+        <p>
+          Styling is added to <abbr title="Hypertext Markup Language">HTML</abbr> documents using <abbr title="Cascading Style Sheets">CSS</abbr>.
+        </p>
+        <p>
+          We should only solve problems that actually arise. As <cite>
+          <del datetime="2010-10-14T12:00:00.001-04:00" cite="/changes.html#revision-4">Donald Knuth</del>
+          <ins datetime="2010-10-14T12:00:00.001-04:00" cite="/changes.html#revision-4">C. A. R. Hoare </ins></cite>
+          said: <q>premature optimization is the root of all evil</q>.
+        </p>
+        <p>
+          <s>The president of the USA is currently Barack Obama</s>.
+        </p>
+      </article>
+
+      <article id="html_lists">
+        <h3>LISTS</h3>
+        <ol>
+          <li>Gather ingredients</li>
+          <li>Mix ingredients together</li>
+          <li>Place ingredients in a baking dish</li>
+        </ol>
+        <p class="note">
+          Before you place the ingredients in the baking dish, preheat the oven to 180 degrees centigrade/350 degrees fahrenheit in readiness for the next step
+        </p>
+         <ol start="4">
+          <li>Bake in oven for an hour</li>
+          <li>Remove from oven</li>
+          <li>Allow to stand for ten minutes</li>
+          <li>Serve</li>
+        </ol>
+        <ol>
+          <li>Chapter One
+            <ol>
+              <li>Section One</li>
+              <li>Section Two </li>
+              <li>Section Three </li>
+            </ol>
+          </li>
+          <li>Chapter Two</li>
+          <li>Chapter Three  </li>
+        </ol>
+        <h3>Adding extra information with a title attribute</h3>
+        <ul>
+          <li>Find more information on the <a title="The Yahoo Developer Network is the main hub for all the developer tools Yahoo offers, including the Yahoo User Interface Library (YUI) and the Design Patterns repository" href="http://developer.yahoo.com">Yahoo Developer Network</a>.</li>
+        </ul>
+      </article>
+
+      <article id="links">
+        <h3>LINKS</h3>
+        <p>
+          <a href="start.html">Let's see some links work!!!</a>
+        </p>
+      </article>
+
+      <article id="tables">
+        <h3>TABLES</h3>
+        <table>
+          <caption>Recent Major Volcanic Eruptions in the Pacific Northwest</caption>
+          <thead>
+            <tr>
+              <th scope="col">Volcano Name</th>
+              <th scope="col">Location</th>
+              <th scope="col">Last Major Eruption</th>
+              <th scope="col">Type of Eruption</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td colspan="4">Compiled in 2008 by Ms Jen</td>
+            </tr>
+          </tfoot>  
+          <tbody>
+            <tr>
+              <th scope="row">Mt. Lassen</th>
+              <td>California</td>
+              <td>1914-17</td>
+              <td>Explosive Eruption</td>
+            </tr>
+            <tr>
+              <th scope="row">Mt. Hood</th>
+              <td>Oregon</td>
+              <td>1790s</td>
+              <td>Pyroclastic flows and Mudflows</td>
+            </tr>
+            <tr>
+              <th scope="row">Mt. St. Helens</th>
+              <td>Washington</td>
+              <td>1980</td>
+              <td>Explosive Eruption</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article id="forms">
+        <h3>FORMS</h3>
+        <form id="contact-form" action="script.php" method="post">
+          <fieldset>           
+            <legend>Login details</legend>
+            <ul>
+              <li><label for="name">Name:</label> <input type="text" name="name" id="name" value="" autofocus /></li>
+              <li><label for="email">Email:</label> <input type="text" name="email" id="email" value="" /></li>
+              <li><label for="pwd">Password:</label> <input type="password" name="pwd" id="pwd" value="" /></li>
+            </ul>
+            <ul>
+              <li>Please check all the emotions that apply to you:
+                <ul>
+                  <li><label for="angry">Angry</label> <input type="checkbox" name="angry" id="angry" value="angry"></li>
+                  <li><label for="sad">Sad</label> <input type="checkbox" name="sad" id="sad" value="sad"></li>
+                  <li><label for="happy">Happy</label> <input type="checkbox" name="happy" id="happy" value="happy"></li>
+                  <li><label for="ambivalent">Ambivalent</label> <input type="checkbox" name="ambivalent" id="ambivalent" value="ambivalent"></li>
+                </ul>
+              </li>
+              <li>How satisfied were you with our service?
+                <ul>
+                  <li><label for="vsat">Very satisfied</label> <input type="radio" name="satisfaction" id="vsat" value="vsat"></li>
+                  <li><label for="sat">Satisfied</label> <input type="radio" name="satisfaction" id="sat" value="sat"></li>
+                  <li><label for="dcare">Didn't care</label> <input type="radio" name="satisfaction" id="dcare" value="dcare"></li>
+                  <li><label for="disat">Dissatisfied</label> <input type="radio" name="satisfaction" id="disat" value="disat"></li>
+                  <li><label for="vdisat">Very dissatisfied</label> <input type="radio" name="satisfaction" id="vdisat" value="vdisat"></li>
+                </ul>
+              </li>
+              <li>
+                <label for="comments">Further comments:</label> <textarea name="comments" id="comments" cols="25" rows="3"></textarea>
+              </li>
+            </ul>    
+            <ul>
+              <li>
+                <label for="photo">Bio photo:</label> <input type="file" name="photo" id="photo">
+              </li>
+              <li>
+                <label for="location">Location visited:</label>
+                <select name="location" id="location">
+                  <option value="">Select location</option>
+                  <option value="nyork">New York</option>
+                  <option value="vancouver">Vancouver</option>
+                  <option value="atlantis">Atlantis</option>
+                  <option value="alpha">Alpha Centauri</option>
+                  <option value="blackpool">Blackpool</option>
+                  <option value="bognor">Bognor Regis</option>
+                </select>
+              </li>
+              <li>
+                <label for="cars">Great Cars:</label>
+                <select name="cars" id="cars">
+                  <optgroup label="Swedish Cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                  </optgroup>
+                  <optgroup label="German Cars">
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </optgroup>
+                </select> 
+              </li>
+            </lu>
+            <lu>
+              <li>
+                <input type="submit" value="submit" />
+              </li>
+            </lu>
+         </fieldset>
+        </form>
+      </article>
+
+      <article id="forms_html5">
+        <h3>FORMS HTML5</h3>
+        <form oninput="progress.value = weight.value*0.01">
+          <input type="range" id="weight">
+          <meter id="progress"></meter>
+        </form>
+        <form>
+        <input type="number" min="1" max="10" required/>
+        <input type="date"/>
+        <input type="time"/>
+        <input type="month"/>
+        <input type="week"/>
+        <input type="color"/>
+        <input type="tel">
+        <input type="email" placeholder="fede@gmail.com">
+        <input type="url">
+        <input type="submit" value="submit" />
+        </form>
+      </article> 
+    </section>
+
+    <footer>
+      <h2>FOOTER</h2>
+      <address> 
+        <span>Mark Norman Francis</span>
+        <span class="tel">1-800-555-4865</span>
+      </address>
+      <p>
+        Our company address:
+      </p>
+      <address>
+        Opera Software ASA,<br/>
+        Waldemar Thranes gate 98,<br/>
+        NO-0175 OSLO,<br/>
+        NORWAY
+      </address>
+    </footer>
+
+  </body>
+</html>
