@@ -1,0 +1,249 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Verdana,sans-serif;
+  color: white;
+  line-height: 150%;
+  background: url("bkg.png") repeat scroll 0% 0%;
+}
+
+
+/*Page cointainers*/
+/*----------------*/
+
+.outer-container {
+  position: relative;
+  width: 100%;
+}
+
+.inner-container {
+  position: relative;
+  width: 95%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+
+/*Arrow on left*/
+/*-------------*/
+
+.arrow {
+  position: fixed;
+  right: 0px;
+  top: 50%;
+  background: rgba(0,0,0,0.65);
+  width: auto;
+  text-align: right;
+  padding: 2rem 0rem 2rem 0.6rem;
+}
+
+
+/*By dafult only shows the arroy*/
+.arrow .hidden-msg {
+  visibility: hidden;
+  display: none;
+}
+
+/*Should you hover the section, it hide the
+  arrow and shows the message*/
+.arrow:hover .hidden-msg {
+  visibility: visible;
+  display: block;
+}
+
+.arrow:hover .arrow-msg {
+  visibility: hidden;
+  display: none
+}
+
+
+/*Header presentation*/
+/*-------------------*/
+
+header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+header h1 {
+  margin: 0px;
+  font-size: 1.5rem;
+}
+
+header p {
+  margin: 0px;
+}
+
+header p+p {
+  margin-top: 1.5rem;
+}
+
+.title {
+  float: left;
+  width: 33%;
+}
+
+.sumary {
+  float: left;
+  width: 67%
+}
+
+
+/*Page body presentation*/
+/*----------------------*/
+
+.page-container{
+  position: relative;
+  width: 100%;
+  clear: both;
+  margin-top: 3rem;
+  overflow: hidden;
+
+/*taken "from http://dev.opera.com/articles/beautiful-ui-styling-with-css3/"*/
+  padding: 4px;
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius:10px 10px 10px 10px;
+  -webkit-box-shadow:
+    0 2px 6px rgba(0,0,0,0.5),
+    inset 0 1px rgba(255,255,255,0.3),
+    inset 0 10px rgba(255,255,255,0.2),
+    inset 0 10px 20px rgba(255,255,255,0.25),
+    inset 0 -15px 30px rgba(0,0,0,0.3);
+  -moz-box-shadow:
+    0 2px 6px rgba(0,0,0,0.5),
+    inset 0 1px rgba(255,255,255,0.3),
+    inset 0 10px rgba(255,255,255,0.2),
+    inset 0 10px 20px rgba(255,255,255,0.25),
+    inset 0 -15px 30px rgba(0,0,0,0.3);
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.5),
+    inset 0 1px rgba(255,255,255,0.3),
+    inset 0 10px rgba(255,255,255,0.2),
+    inset 0 10px 20px rgba(255,255,255,0.25),
+    inset 0 -15px 30px rgba(0,0,0,0.3);
+  background:rgba(0,0,0,0.25);
+}
+
+.grid-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+/*By defult the grid has 3 columns*/
+.grid-cell {
+  position: relative;
+  float: left;
+  margin: 0px;
+  padding: 0.5rem;
+  width: 33.3%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border-radius:10px 10px 10px 10px;
+}
+
+
+/*Footer*/
+/*------*/
+
+footer {
+  position: relative;
+  width: 90%;
+  clear: left;
+  margin: 3rem auto;
+  text-align: center;
+
+/*taken "from http://dev.opera.com/articles/beautiful-ui-styling-with-css3/"*/
+  padding: 4px;
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius:10px 10px 10px 10px;
+  -webkit-box-shadow:
+    0 2px 6px rgba(0,0,0,0.5),
+    inset 0 1px rgba(255,255,255,0.3),
+    inset 0 10px rgba(255,255,255,0.2),
+    inset 0 10px 20px rgba(255,255,255,0.25),
+    inset 0 -15px 30px rgba(0,0,0,0.3);
+  -moz-box-shadow:
+    0 2px 6px rgba(0,0,0,0.5),
+    inset 0 1px rgba(255,255,255,0.3),
+    inset 0 10px rgba(255,255,255,0.2),
+    inset 0 10px 20px rgba(255,255,255,0.25),
+    inset 0 -15px 30px rgba(0,0,0,0.3);
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.5),
+    inset 0 1px rgba(255,255,255,0.3),
+    inset 0 10px rgba(255,255,255,0.2),
+    inset 0 10px 20px rgba(255,255,255,0.25),
+    inset 0 -15px 30px rgba(0,0,0,0.3);
+  background:rgba(0,0,0,0.25);
+}
+
+
+/*Different screen size modifying the layout*/
+/*------------------------------------------*/
+
+/*Really small screen*/
+@media (max-width: 479px) {
+
+  header h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .title, .sumary {
+    float: none;
+    width: auto;
+  }
+
+/*One column grid*/
+  .grid-cell {
+    width: 100%;
+  }
+}
+
+/*Small screen*/
+@media (min-width: 480px) and (max-width: 800px) {
+
+  header h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .title, .sumary {
+    float: none;
+    width: auto;
+  }
+
+/*Two columns grid*/
+  .grid-cell {
+    width: 50%;
+  }
+}
+
+/*Medium Screen*/
+/*as it is as default*/
+
+/*Large screen or TV*/
+
+@media tv, (min-width: 1800px) {
+
+  html {
+    font-size: 150%;
+  }
+
+/*Four columns grid*/
+  .grid-cell {
+    width: 25%;
+  }
+}
