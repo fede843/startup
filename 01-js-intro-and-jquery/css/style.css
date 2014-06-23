@@ -1,0 +1,206 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Verdana,sans-serif;
+  text-align: center;
+  line-height: 150%;
+  background: url("bkg.jpg") repeat scroll 0% 0%;
+}
+
+
+/*Page cointainers*/
+/*----------------*/
+.outer-container {
+  position: relative;
+  width: 100%;
+}
+
+.inner-container {
+  position: relative;
+  width: 95%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+
+/*Sections inside*/
+/*---------------*/
+section,
+article,
+aside,
+footer {
+  position: relative;
+}
+
+
+/*Main page section*/
+/*----------------*/
+.page-container {
+  width: 60%;
+  float: left;
+}
+
+/*Opacity initially set to 0. Then modified by js*/
+.search_box {
+  opacity: 0;
+}
+
+.alias {
+  opacity: 0.65;
+}
+
+#search_button,
+.alias,
+#tweet_button {
+  margin: 1rem;
+}
+
+.response_box {
+  padding: 2rem;
+  margin: 0.7rem auto;
+  width: 14rem;
+  overflow: hidden;
+  }
+
+.success {
+  background-color: palegreen;
+}
+
+.fail {
+  background-color: tomato;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+
+/*Tweet aside section*/
+/*-------------------*/
+.tweet_side {
+  width: 40%;
+  max-width: 500px;
+  float: left;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+/*To prevent margin collapse in the first and last item*/
+  overflow: auto;
+}
+
+.tweet_side article {
+  border: 1px solid black;
+  border-radius: 60px;
+  margin: 11px;
+ }
+
+.tweet_side header img {
+  float: left;
+  width: 50px;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.tweet_side header div {
+  padding: 0.65rem;
+  padding-left: 60px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.tweet_side section {
+  clear: left;
+  padding: 1rem;
+}
+
+.tweet_side footer {
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem 2rem;
+}
+
+.loading_icon img{
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30%;
+}
+
+.loading {
+  border-radius: 200px;
+}
+
+/*Loading Animation*/
+.animation
+ {
+  -webkit-animation: transition 1s; /* Chrome, Safari, Opera*/
+  animation: transition 1s;
+}
+
+/* Chrome, Safari, Opera*/
+@-webkit-keyframes transition {
+  from { border-radius: 200px; }
+  to   { border-radius: 40px; }
+}
+
+/* Standard syntax*/
+@keyframes transition {
+  from { border-radius: 200px; }
+  to   { border-radius: 40px; }
+} 
+
+
+/*Footer*/
+/*------*/
+.footer {
+  clear: left;
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+
+/*Different screen size modifying the layout*/
+/*------------------------------------------*/
+@media (max-width: 800px) {
+  html {
+    font-size: 75%;
+  }
+  .page-container {
+    float: none;
+    width: 100%;
+  }
+
+  .tweet_side {
+    float: none;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+/*
+Couldn't get the focus working with this approach
+
+.fade_in {
+  -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera 
+  animation: myfirst 5s;
+}
+
+/* Chrome, Safari, Opera 
+@-webkit-keyframes myfirst {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Standard syntax 
+@keyframes myfirst {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+} 
+*/
