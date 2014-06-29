@@ -1,0 +1,126 @@
+{
+  "name": "Federico",
+  "lastName": "Vidaurreta",
+  "picture": "",
+  "currentPosition": "",
+  "currentSegment": "",
+  "previusPosition": "Seismic Positioning Engineer at WesternGeco",
+  "country": "Argentina",
+  "currentEducation": "Universidad Nacional del Sur",
+  "expirience": [
+    {
+      "position":       "Seismic Positioning Engineer",
+      "company":        "WesternGeco",
+      "from":           "January 2012",
+      "to":             "November 2013",
+      "jobDescription": "Navigation operator on board seismic vessel"
+    },
+    {
+      "position":       "Trainee Positioning Enginee",
+      "company":        "WesternGeco",
+      "from":           "July 2010",
+      "to":             "December 2011",
+      "jobDescription": "Junior Navigator on board seismic vessel with 35 days rotation (35 offshore, 35 home)"
+    },
+    {
+      "position":       "Intern",
+      "company":        "System Department of Central Librery in Universidad Nacional del Sur",
+      "from":           "September 2008",
+      "to":             "June 2010",
+      "jobDescription": "Implementation, launching and maintenance of an electronic system for the publication of digital scientific journals"
+    }
+  ],
+  "languagues": [
+    {
+      "lang":   "Spanish",
+      "level":  "Native"
+    },
+    {
+      "lang":   "English",
+      "level":  "Professional"
+    }
+  ],
+  "topSkills": [
+    {
+      "name":     "Linux",
+      "endosers": "8"
+    },
+    {
+      "name":     "Seismology",
+      "endosers": "6"
+    },
+    {
+      "name":     "Windows",
+      "endosers": "4"
+    },
+    {
+      "name":     "SQL",
+      "endosers": "3"
+    },
+    {
+      "name":     "C",
+      "endosers": "3"
+    },
+    {
+      "name":     "C++",
+      "endosers": "3"
+    },
+    {
+      "name":     "C#",
+      "endosers": "3"
+    },
+    {
+      "name":     "Petroleum Engineering",
+      "endosers": "3"
+    },
+    {
+      "name":     "Java",
+      "endosers": "2"
+    },
+    {
+      "name":     "DNS",
+      "endosers": "1"
+    }
+  ],
+  "alsoSkills": [
+    "HTML",
+    "VMware",
+    "Bash",
+    "VirtualBox",
+    "OS",
+    "Networking",
+    "Solaris",
+    "TCP/IP",
+    "Computer Engineering"
+  ],
+  "education": [
+    {
+      "school":        "Universidad Nacional del Sur",
+      "from":          "2004",
+      "to":             "2009", 
+      "degree":        "Computer Systems Engineer",
+      "fildOfStudy":   "Computer Science",
+      "grade":         "",
+      "activities":    "LIDIA (http://lidia.cs.uns.edu.ar/home/), Matebots (http://www.cs.uns.edu.ar/~ajg/matebots/)"
+    }
+  ],
+  "interest": [
+    "new technology",
+    "distributed systems",
+    "networking",
+    "O.S. and network security",
+    "database",
+    "virtualization",
+    "paralelism",
+    "surf the Web",
+    "football",
+    "fishing",
+     "movies"
+  ],
+  "honors": [
+    {
+      "title":           "4th Argentinean Championship of Robotic Football",
+      "description":     "4th Argentinean Championship of Robotic Football” (CAFR 2008), in Neuquen, with the “Matebots Team” obtaining the third place"
+    }
+  ]
+}

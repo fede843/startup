@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Template Engines</title>
+		<meta name="description" content="Template Engines">
+		<meta name="author" content="Federico Vidaurreta">
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+		<link rel="stylesheet" href="css/normalize.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+	</head>
+
+	<body>
+		<div id="page" class="page">
+		</div>
+		<script id="page-template" type="x-handlebars-template">
+			<header>
+				{?picture}
+					<img src="{picture}" alt="Profile Picture" class="profilePicture">
+				{:else}
+					<img src=css/profile.jpg alt="Profile Picture" class="profilePicture">
+				{/picture}
+				<div class="name">
+					<h1>{name} {lastName}</h1>
+				</div>	
+				{?currentPosition}
+					<div class="regularTitle">
+						{currentPosition} | {currentSegment}
+					</div>
+				{/currentPosition}
+				{?country}
+					<div class="country">
+						{country}
+					</div>
+				{/country}
+				{?previusPosition}
+					<div class="regularTitle">
+						Previous: {previusPosition}
+					</div>
+				{/previusPosition}
+				{?currentEducation}
+					<div class="regularTitle">
+						Education: {currentEducation}
+					</div>
+				{/currentEducation}
+			</header>
+			<section>
+				{?expirience}
+					<article class="main_article">
+						<div class="sectionTitle"><img class="expirience">Experience</div>
+						{#expirience}
+							<article>
+								<header>
+									<div class="highTitle">
+										{position}
+									</div>
+									<div class="subTitle">
+										{company}
+									</div>
+									<div class="date">
+										{from} - {to}
+									</div>
+								</header>
+								<content>
+									<div class="regular">
+										{jobDescription}
+									</div>
+								</content>
+							</article>
+						{/expirience}
+					</article>
+				{/expirience}
+				{?languagues}
+					<article class="main_article">
+						<div class="sectionTitle"><img class="languagues">Languages</div>
+						{#languagues}
+							<article class="lang_article">
+								<header>
+									<div class="highTitle">
+										{lang}
+									</div>
+								</header>
+								<content>
+									<div class="regular">
+										{level}
+									</div>
+								</content>
+							</article>
+						{/languagues}
+					</article>
+				{/languagues}
+				{?topSkills}
+					<article class="main_article">
+						<div class="sectionTitle"><img class="skills">Skills & Endorsements</div>
+						<div class="skillBox">
+							<div class="sectionSubTitle">Top Skills</div>
+							{#topSkills}
+								<div class="skill">	
+									<span class="endorse">{endosers}</span>
+									{name}
+								</div><div class="endorsers-container"></div>
+							{/topSkills}
+						</div>
+						{?alsoSkills}
+							<div class="skillSub">
+								<div class="sectionSubTitle">{name} also knows about...</div>
+								{#alsoSkills}
+									<div class="skill">	
+										{.}
+									</div>
+								{/alsoSkills}
+							</div>
+						{/alsoSkills}
+					</article>
+				{/topSkills}
+				{?education}
+					<article class="main_article">
+						<div class="sectionTitle"><img class="education">Education</div>
+						{#education}
+							<article>
+								<header>
+									<div class="highTitle">
+										{school}
+									</div>
+									<div class="subTitle">
+										{degree}
+									</div>
+									<div class="date">
+										{from} - {{to}
+									</div>
+								</header>
+								<content>
+									<div class="regular">
+										Activities and Societies: {activities}
+									</div>
+								</content>
+							</article>
+						{/education}
+					</article>
+				{/education}
+		        {?interest}
+		         	<article class="main_article">
+		            	<div class="sectionTitle"><img class="interest">Interest</div>
+		            	{#interest}
+		              		<div class="skill"> 
+		                		{.}
+		              		</div>
+		            	{/interest}
+		          	</article>
+		        {/interest}
+		   		{?honors}
+					<article class="main_article">
+						<div class="sectionTitle"><img class="honors">Additional Honors & Awards</div>
+						{#honors}
+							<article>
+								<header>
+									<div class="highTitle">
+										{title}
+									</div>
+								</header>
+								<content>
+									<div class="regular">
+										{description}
+									</div>
+								</content>
+							</article>
+						{/honors}
+					</article>
+				{/honors}
+			</section>
+		</script>
+		<!--script src="js/libs/handlebars-v1.3.0.js"></script-->
+		<!--script src="js/libs/underscore-min.js"></script-->
+		<script src="js/libs/dust-full-0.3.0.js"></script>
+		<script src="js/libs/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/script.js" ></script>
+	</body>
+</html>

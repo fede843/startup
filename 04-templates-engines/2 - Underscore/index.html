@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Template Engines</title>
+		<meta name="description" content="Template Engines">
+		<meta name="author" content="Federico Vidaurreta">
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+		<link rel="stylesheet" href="css/normalize.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+	</head>
+
+	<body>
+		<div id="page" class="page">
+		</div>
+		<script id="page-template" type="x-handlebars-template">
+			<header>
+				<% if (picture) {%>
+					<img src="<%=picture%>" alt="Profile Picture" class="profilePicture">
+				<%} else {%>
+					<img src=css/profile.jpg alt="Profile Picture" class="profilePicture">
+				<%};%>
+				<div class="name">
+					<h1><%=name%> <%=lastName%></h1>
+				</div>	
+				<% if (currentPosition) {%>
+					<div class="regularTitle">
+						<%=currentPosition%> | <%=currentSegment%>
+					</div>
+				<%};%>
+				<% if (country) {%>
+					<div class="country">
+						<%=country%>
+					</div>
+				<%};%>
+				<% if (previusPosition) {%>
+					<div class="regularTitle">
+						Previous: <%=previusPosition%>
+					</div>
+				<%};%>
+				<% if (currentEducation) {%>
+					<div class="regularTitle">
+						Education: <%=currentEducation%>
+					</div>
+				<%};%>
+			</header>
+			<section>
+				<% if (expirience) {%>
+					<article class="main_article">
+						<div class="sectionTitle"><img class="expirience">Experience</div>
+						<% _.each(expirience, function(exp) {%>
+							<article>
+								<header>
+									<div class="highTitle">
+										<%=exp.position%>
+									</div>
+									<div class="subTitle">
+										<%=exp.company%>
+									</div>
+									<div class="date">
+										<%=exp.from%> - <%=exp.to%>
+									</div>
+								</header>
+								<content>
+									<div class="regular">
+										<%=exp.jobDescription%>
+									</div>
+								</content>
+							</article>
+						<%});%>
+					</article>
+				<%};%>
+				<% if (languagues) {%>
+					<article class="main_article">
+						<div class="sectionTitle"><img class="languagues">Languages</div>
+						<% _.each(languagues, function(lan) {%>
+							<article class="lang_article">
+								<header>
+									<div class="highTitle">
+										<%=lan.lang%>
+									</div>
+								</header>
+								<content>
+									<div class="regular">
+										<%=lan.level%>
+									</div>
+								</content>
+							</article>
+						<%});%>
+					</article>
+				<%};%>
+				<% if (topSkills) {%>
+					<article class="main_article">
+						<div class="sectionTitle"><img class="skills">Skills & Endorsements</div>
+						<div class="skillBox">
+							<div class="sectionSubTitle">Top Skills</div>
+							<% _.each(topSkills, function(top) {%>
+								<div class="skill">	
+									<span class="endorse"><%=top.endosers%></span>
+									<%=top.name%>
+								</div><div class="endorsers-container"></div>
+							<%});%>
+						</div>
+						<% if (alsoSkills) {%>
+							<div class="skillSub">
+								<div class="sectionSubTitle"><%=name%> also knows about...</div>
+								<% _.each(alsoSkills, function(also) {%>
+									<div class="skill">	
+										<%=also%>
+									</div>
+								<%});%>
+							</div>
+						<%};%>
+					</article>
+				<%};%>
+				<% if (education) {%>
+					<article class="main_article">
+						<div class="sectionTitle"><img class="education">Education</div>
+						<% _.each(education, function(edu) {%>
+							<article>
+								<header>
+									<div class="highTitle">
+										<%=edu.school%>
+									</div>
+									<div class="subTitle">
+										<%=edu.degree%>
+									</div>
+									<div class="date">
+										<%=edu.from%> - <%=edu.to%>
+									</div>
+								</header>
+								<content>
+									<div class="regular">
+										Activities and Societies: <%=edu.activities%>
+									</div>
+								</content>
+							</article>
+						<%});%>
+					</article>
+				<%};%>
+		        <% if (interest) {%>
+		         	<article class="main_article">
+		            	<div class="sectionTitle"><img class="interest">Interest</div>
+		            	<% _.each(interest, function(inte) {%>
+		              		<div class="skill"> 
+		                		<%=inte%>
+		              		</div>
+		            	<%});%>
+		          	</article>
+		        <%};%>
+		   		<% if (honors) {%>
+					<article class="main_article">
+						<div class="sectionTitle"><img class="honors">Additional Honors & Awards</div>
+						<% _.each(honors, function(hon) {%>
+							<article>
+								<header>
+									<div class="highTitle">
+										<%=hon.title%>
+									</div>
+								</header>
+								<content>
+									<div class="regular">
+										<%=hon.description%>
+									</div>
+								</content>
+							</article>
+						<%});%>
+					</article>
+				<%};%>
+			</section>
+		</script>
+		<!--script src="js/libs/handlebars-v1.3.0.js"></script-->
+		<script src="js/libs/underscore-min.js"></script>
+		<!--script src="js/libs/dust-full-0.3.0.js"></script-->
+		<script src="js/libs/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/script.js" ></script>
+	</body>
+</html>

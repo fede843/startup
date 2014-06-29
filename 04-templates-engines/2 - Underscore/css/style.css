@@ -1,0 +1,132 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 90%;
+}
+
+body {
+  font-family: Arial,sans-serif;
+  color: black;
+  line-height: 150%;
+  background: url("bkg.png") repeat scroll 0% 0%;
+  width: 100%;
+  position: relative;
+}
+
+
+/*Page cointainer*/
+/*----------------*/
+.page {
+  position: relative;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 0rem 1rem;
+  background-color: white;
+  width: 600px;
+}
+
+
+/**/
+.main_article {
+  padding: 1.5rem 0rem;
+  margin: 0rem;
+  margin: auto;
+  clear: both;
+}
+
+.expirience,
+.languagues,
+.skills,
+.education,
+.interest,
+.honors {
+  content:url(item.png);
+  width: 3rem;
+  vertical-align: middle;
+  padding: 0rem 0rem;
+  margin: 0rem 1rem;
+}
+
+.name{
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+.profilePicture {
+  float: left;
+  width: 12rem;
+  margin: 2rem;
+  border-radius: 2rem;
+} 
+
+.country {
+}
+
+.regularTitle {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+.sectionTitle {
+  color: #434649;
+  padding: 1rem 0rem 2rem 0rem;
+}
+
+.highTitle {
+  font-weight: 800;
+}
+
+.subTitle {
+  line-height: 0.4;
+}
+.date {
+  line-height: 1.9rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.regular {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.lang_article {
+  float: left;
+  width: auto;
+  padding-right:  3rem;
+}
+
+.sectionSubTitle {
+  padding-top: 1.5rem;
+  padding-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.skill {
+  background-color: #F0F0F0;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0rem;
+  margin: 0.3rem;
+}
+
+.endorsers-container {
+  overflow: hidden;
+}
+
+.endorse{
+  font-weight: bold;
+  color: white;
+  vertical-align: middle;
+  background-color: #1BA8E5;
+  border: 1px solid #1BA8E5;
+  padding: 0.33rem;
+  margin: 0rem;
+  border-radius: 0.5rem 0rem 0 0.5rem;
+  }
