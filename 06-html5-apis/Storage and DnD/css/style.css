@@ -1,0 +1,52 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Verdana,sans-serif;
+  background: url("bkg.jpg") repeat scroll 0% 0%;
+  position: relative;
+}
+
+body > div {
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  position: relative;
+}
+
+#textareaDrag {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 50px auto;
+  text-align: center;
+  vertical-align: middle;
+  border: 3px dashed #000;
+  -webkit-transition: all 0.2s;
+          transition: all 0.2s;
+}
+
+#textarea {
+  width: 500px;
+  height: 200px;
+  display: block;
+  margin: auto;
+}
+
+button {
+  margin: 10px;
+}
+
+.dragOver {
+  text-shadow: 0 0 1px #000, 0 0 10px rgba(199, 107, 107, 0.8);
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+}
