@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MVC and Mixins</title>
+		<meta name="description" content="MVC and Mixins">
+		<meta name="author" content="Federico Vidaurreta">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/normalize.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<script data-main="js/start" src="js/lib/require.js"></script>
+	</head>
+
+	<body>
+		<div id="appContainer">
+			<header id="newMovie">
+				<div><label for="addTitle">Title:</label><input type="text" name="addTitle" placeholder="e.g. Forrest Gump"></div>
+				<div><label for="addCover">Cover:</label><input type="file" name="addCover"></div>
+				<div><label for="addYear">Year:</label><input type="number" name="addYear" placeholder="e.g. 1994"></div>
+				<div><label for="addDirector">Director:</label><input type="text" name="addDirector" placeholder="e.g. Robert Zemeckis"></div>
+				<div><label for="addCountry">Country:</label><input type="text" name="addCountry" placeholder="e.g. USA"></div>
+				<div><label for="addStoryline">Storyline:</label><textarea type="text" name="addStoryline"></textarea></div>
+				<div><button type="button" id="addMovie">Add Movie</button></div>
+			</header> 
+
+			<section id="movies">
+			</section>
+		</div>
+
+		<script type="text/template" id="movieTemplate">
+
+			<div class="view">
+				<aside>
+					<div class="cover">
+						<% if (cover) {%>
+							<img src="<%=cover%>" alt="Cover Picture" class="coverPicture">
+						<%} else {%>
+							<img src="img/default.jpg" alt="Cover Picture" class="coverPicture">
+						<%};%>
+					</div>
+				</aside>
+				<header>
+					<div class="title">
+						<%= title %>
+					</div>
+					<div class="year">
+						(<%=year%>)
+					</div>
+					<div class="country">
+						<%=country%>
+					</div>
+					<div class="director">
+						<span class="subtitle">Directed by: </span><%=director%>
+					</div>
+				</header>
+				<section>
+					<div class="storyline">
+						<span class="subtitle">Storyline: </span><%=storyline%>
+					</div>
+				</section>
+			</div>
+			<div class="edit hide">
+				<div><label for="editTitle">Title:</label><input type="text" name="editTitle" placeholder="<%=title%>"></div>
+				<div><label for="editYear">Year:</label><input type="number" name="editYear" placeholder="<%=year%>"></div>
+				<div><label for="editDirector">Director:</label><input type="text" name="editDirector" placeholder="<%=director%>"></div>
+				<div><label for="ediCountry">Country:</label><input type="text" name="editCountry" placeholder="<%=country%>"></div>
+				<div><label for="editStoryline">Storyline:</label><textarea name="editStoryline"></textarea></div>
+				<div><label for="editCover">Cover:</label><input type="file" name="editCover"></div>
+				<div><button type="button" id="save">Save</button></div>
+			</div>
+			<div id="delete">X</div> 
+		</script>
+
+	</body>
+</html>

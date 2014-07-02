@@ -1,0 +1,147 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 95%;
+}
+
+body {
+  background: url("../img/bkg.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+#appContainer {
+  position: relative;
+  width: 1100px;
+}
+
+#newMovie {
+  padding: 1rem;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 600px;
+  box-shadow: -5px 5px 50px 10px #A1A1A1;
+  z-index: 1000;
+  opacity: 0.85;
+}
+
+#newMovie > div,
+.edit > div {
+  position: relative;
+  display: block;
+}
+
+#newMovie > div > label,
+.edit > div > label {
+  padding: 0.2rem;
+  font-size: 0.9rem;
+}
+
+#newMovie > div > *:nth-child(2),
+.edit > div > *:nth-child(2) {
+  padding: 0.2rem;
+  margin: 0.2rem 0rem 0.2rem 1rem;
+  width: 90%;
+}
+
+#newMovie > div textarea,
+.edit > div textarea {
+  width: 400px;
+  height: 100px;
+}
+
+#movies {
+  opacity: 0.8;
+}
+
+#movies > article {
+  border: 1px solid black;
+  margin: 10px;
+  width: 400px;
+  padding: 1rem;
+  border-radius: 15px;
+  overflow: hidden;
+  background: url("../img/movie_bkg.jpg");
+  background-size: cover;
+  box-shadow: -5px 2px 5px 0 #A1A1A1;
+  position: relative;
+}
+ 
+#movies aside {
+  float: left;
+}
+
+.coverPicture {
+  width: 100px;
+  padding: 0px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-right: 10px;
+  box-shadow: -5px 2px 5px 0 #A1A1A1;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: 1000;
+}
+
+.year {
+  font-size: 0.8rem;
+  color: #2E2E2E;
+}
+
+.country {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #848484;
+}
+
+.director {
+  color: #494343;
+}
+
+#movies .subtitle {
+  font-style: italic;
+  font-weight: 600 ;
+  color: black;
+}
+
+#movies section {
+  clear: left;
+}
+
+.storyline {
+  font-weight: 650;
+  color: #494343;
+  font-size: 0.8rem;
+}
+
+.hide {
+  display: none;
+}
+
+#delete {
+  position: absolute;
+  z-index: 1000;
+  top: 10px;
+  right: 20px;
+  font-size: 3rem;
+  color: #61380B;
+  -webkit-transition: all 0.2s;
+          transition: all 0.2s;
+}
+
+#delete:hover {
+  text-shadow: 0 0 1px #000, 0 0 10px rgba(199, 107, 107, 0.8);
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
+}
